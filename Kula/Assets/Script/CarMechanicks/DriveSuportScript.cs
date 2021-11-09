@@ -17,12 +17,13 @@ public class DriveSuportScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print(transform.up.y);
         if (transform.up.y > 0.5f || rb.velocity.magnitude > 1)
         {
-            lastTimeOK = Time.deltaTime;
+            lastTimeOK = Time.time;
 
         }
-        if (Time.deltaTime > lastTimeOK + 3)
+        if (Time.time > lastTimeOK + 3)
         {
             TurnCarBack();
         }
@@ -30,6 +31,7 @@ public class DriveSuportScript : MonoBehaviour
 
     private void TurnCarBack()
     {
+        print("Turn back attempt");
         transform.position += Vector3.up;
         transform.rotation = Quaternion.LookRotation(transform.forward);
     }
