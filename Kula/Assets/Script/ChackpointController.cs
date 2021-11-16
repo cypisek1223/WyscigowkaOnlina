@@ -6,15 +6,28 @@ public class ChackpointController : MonoBehaviour
 {
 
     public int lap = 0;
-    public int Lastchackpoint = -1;
+    public int LastChackpoint = -1;
     int CheckPointCount;
 
     int NextCheckPoint;
 
+    public GameObject lastPoint;
     // Start is called before the first frame update
     void Start()
     {
-        CheckPointCount = GameObject.FindGameObjectsWithTag("ChackPoint").Length;
+        GameObject[] poinst = GameObject.FindGameObjectsWithTag("ChackPoint");
+        CheckPointCount = poinst.Length;
+        foreach(GameObject obj in poinst)
+        {
+            if(obj.name == "0")
+            {
+                if (obj.name == "0")
+                {
+                    lastPoint = obj;
+                    break;
+                }
+            }
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -23,8 +36,10 @@ public class ChackpointController : MonoBehaviour
             int currentCheckpoint = int.Parse(other.gameObject.name);
             if (currentCheckpoint == NextCheckPoint)
             {
-                Lastchackpoint++;
-                if (Lastchackpoint == 0)
+
+                LastChackpoint = currentCheckpoint;
+                lastPoint = other.gameObject;
+                if (LastChackpoint == 0)
                 {
                     lap++;
                     print($"Lap: {lap}");

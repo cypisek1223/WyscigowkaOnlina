@@ -14,6 +14,7 @@ public class DrivingScripts : MonoBehaviour
     public Rigidbody rb;
     public float currentSpeed;
 
+    public GameObject cameraTarget;
 
     public void Drive(float accel,float brake ,float streer) {
         accel = Mathf.Clamp(accel, -1, 1);
@@ -54,13 +55,6 @@ public class DrivingScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float accel = Input.GetAxis("Vertical");
-        float streer = Input.GetAxis("Horizontal");
-        float brake = Input.GetAxis("Jump");
-        if (!RaceController.racePanding)
-        {
-            accel = 0;
-        }
-        Drive(accel, brake, streer);
+       
     }
 }

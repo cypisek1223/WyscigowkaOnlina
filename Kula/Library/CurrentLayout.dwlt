@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 22
+  controlID: 105
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 23
+  controlID: 38
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 24
+  controlID: 39
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -362,20 +362,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\Ucze\u0144\\Documents\\GitHub\\WyscigowkaOnlina\\Kula"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 66}
-    m_SelectedIDs: 862b0000
-    m_LastClickedID: 11142
-    m_ExpandedIDs: 00000000e82700005a280000842800009629000000ca9a3b
+    m_SelectedIDs: f42a0000
+    m_LastClickedID: 10996
+    m_ExpandedIDs: 00000000ec270000602800008a2800009c29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,7 +403,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e82700005a2800008428000096290000
+    m_ExpandedIDs: 00000000ec270000602800008a2800009c290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -522,9 +522,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 30fbffffd2f7ffffc8faffffe8f6ffff
-      m_LastClickedID: -2328
-      m_ExpandedIDs: a6a2ffffc0b1fffffcf6ffffe6f7ffffdcfaffff44fbffffd2fbffff202d0000e22d0000
+      m_SelectedIDs: e0790000
+      m_LastClickedID: 31200
+      m_ExpandedIDs: dc790000e0790000fc790000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -575,14 +575,14 @@ MonoBehaviour:
     height: 602
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 0f3f8a49557e53846a13e6d847858313
-  m_SceneLighting: 1
+  m_SceneLighting: 0
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 233.56, y: 6.9732156, z: 87.54001}
+    m_Target: {x: 78.44431, y: 2.302607, z: 61.382416}
     speed: 2
-    m_Value: {x: 233.56, y: 6.9732156, z: 87.54001}
+    m_Value: {x: 78.44431, y: 2.302607, z: 61.382416}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,13 +610,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.09460125, y: -0.5704283, z: 0.066359356, w: -0.81317806}
+    m_Target: {x: -0.08413581, y: 0.04329977, z: -0.0036601739, w: -0.99550635}
     speed: 2
-    m_Value: {x: -0.09460125, y: -0.5704283, z: 0.066359356, w: -0.81317806}
+    m_Value: {x: -0.08413581, y: 0.04329977, z: -0.0036601739, w: -0.99550635}
   m_Size:
-    m_Target: 378.5937
+    m_Target: 0.9778947
     speed: 2
-    m_Value: 378.5937
+    m_Value: 0.9778947
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -676,7 +676,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
