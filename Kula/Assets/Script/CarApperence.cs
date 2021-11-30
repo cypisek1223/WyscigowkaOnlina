@@ -15,6 +15,18 @@ public class CarApperence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(playerNumber == 0)
+        {
+            PlayerName = PlayerPrefs.GetString("PlayerName");
+            carColor = MeniController.IntToColor(PlayerPrefs.GetInt("red"), PlayerPrefs.GetInt("green"), PlayerPrefs.GetInt("blue"));
+        }
+        else
+        {
+            PlayerName = "Random" + playerNumber;
+            float r = 
+                Random.Range(0, 1);
+            carColor = new Color(r, r, r);
+        }
         nameText.text = PlayerName;
         carRenderer.material.color = carColor;
         nameText.color = carColor;
