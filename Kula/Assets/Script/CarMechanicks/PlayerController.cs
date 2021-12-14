@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
         ChackpointController checkpointController = ds.rb.GetComponent<ChackpointController>();
 
-        if (ds.rb.velocity.magnitude > 1 || RaceController.racePanding == false)
+        if ((ds.rb.velocity.magnitude > 1 || RaceController.racePanding == false ) || (ds.rb.velocity.magnitude < 1 && accel == 0))
         {
             lastTimeOK = Time.time;
         }

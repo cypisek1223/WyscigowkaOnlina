@@ -17,7 +17,26 @@ public class OnlinePlayer : MonoBehaviourPunCallbacks
 
             LocalPlayer = gameObject;
         }
-        
+        else
+        {
+            string PlayerName = null;
+            Color PlayerColor = Color.white;
+
+            //do uzupelnienia 
+
+        if(photonView.InstantiationData != null)
+            {
+                PlayerName = (string)photonView.InstantiationData[0];
+                PlayerColor = MeniController.IntToColor(
+                     (int)photonView.InstantiationData[1],
+                     (int)photonView.InstantiationData[2],
+                     (int)photonView.InstantiationData[3]
+                     );
+
+
+
+            }
+        }
     }
 
 }

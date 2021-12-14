@@ -37,6 +37,9 @@ public class RaceController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void StartGame()
     {
+        WaitText.SetActive(false);
+        StartBurtton.SetActive(false);
+
         InvokeRepeating(nameof(CountDown), 3, 1);
 
         GameObject[] carObject = GameObject.FindGameObjectsWithTag("Car");
@@ -78,9 +81,16 @@ public class RaceController : MonoBehaviourPunCallbacks
             startPos = SpawnPosition[playerCount - 1].position;
             starRot = SpawnPosition[playerCount - 1].rotation;
 
+            object[] instanceData = new object[4];
+            instanceData[0] = PlayerPrefs.GetString("PlayerName");
+            instanceData[1] = PlayerPrefs.GetInt("red");
+            instanceData[2] = PlayerPrefs.GetInt("green");
+            instanceData[3] = PlayerPrefs.GetInt("blue");
+
+
             if (OnlinePlayer.LocalPlayer==null)
             {
-                playerCar = PhotonNetwork.Instantiate(carPrefab.name,startPos, starRot);
+                playerCar = PhotonNetwork.Instantiate(carPrefab.name,startPos, starRot,0,instanceData);
                 playerCar.GetComponent<CarApperence>().SetLocalPlayer();
             }
 
@@ -98,14 +108,7 @@ public class RaceController : MonoBehaviourPunCallbacks
         playerCar.GetComponent<PlayerController>().enabled = true;
 
 
-        InvokeRepeating(nameof(CountDown), 3, 1);
-        GameObject[] carObject = GameObject.FindGameObjectsWithTag("Car");
-        cars = new ChackpointController[carObject.Length];
-        for(int i=0; i < cars.Length; i++)
-        {
-            cars[i]= carObject[i].GetComponent<ChackpointController>();
-        }
-
+      
 
     }
    void CountDown()

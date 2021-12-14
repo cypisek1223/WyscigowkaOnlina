@@ -18,7 +18,9 @@ public class CarApperence : MonoBehaviour
         //if(playerNumber == 0)
         //{
         //    PlayerName = PlayerPrefs.GetString("PlayerName");
-        //    carColor = MeniController.IntToColor(PlayerPrefs.GetInt("red"), PlayerPrefs.GetInt("green"), PlayerPrefs.GetInt("blue"));
+        //    carColor = MeniController.IntToColor(PlayerPrefs.GetInt("red"), 
+        //                                         PlayerPrefs.GetInt("green"), 
+        //                                         PlayerPrefs.GetInt("blue"));
         //}
         //else
         //{
@@ -33,9 +35,18 @@ public class CarApperence : MonoBehaviour
 
 
     }
+    void SetNameAndColor(string name,Color color)
+    {
+        nameText.text = name;
+        carRenderer.material.color = color;
+        nameText.color = color;
+    }
     public void SetLocalPlayer()
     {
-
+        FindObjectOfType<CameraController>().SetCamera(this.gameObject);
+        PlayerName = PlayerPrefs.GetString("PlayerName");
+        carColor = MeniController.IntToColor(PlayerPrefs.GetInt("red"), PlayerPrefs.GetInt("green"), PlayerPrefs.GetInt("blue"));
+        SetNameAndColor(PlayerName,carColor);
     }
     // Update is called once per frame
     void Update()
